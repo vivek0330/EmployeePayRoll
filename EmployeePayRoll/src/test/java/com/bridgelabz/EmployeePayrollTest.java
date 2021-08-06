@@ -15,8 +15,11 @@ public class EmployeePayrollTest {
         };
         EmployeePayrollImpl employeePayroll = new EmployeePayrollImpl(Arrays.asList(arrayOfEmployees));
         employeePayroll.writeData(EmployeePayrollImpl.IOService.FILE_IO);
+        EmployeePayrollImpl.printData(EmployeePayrollImpl.IOService.FILE_IO);
 
         long entries = EmployeePayrollImpl.countEntries(EmployeePayrollImpl.IOService.FILE_IO);
+        System.out.println("Total number of entries are: "+entries);
         Assert.assertEquals(3, entries);
     }
 }
+

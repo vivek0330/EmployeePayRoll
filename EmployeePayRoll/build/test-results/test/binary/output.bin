@@ -1,0 +1,4 @@
+@EmployeePayrollData{id=1, name='Samarth BM', salary=1800000.0}
+:EmployeePayrollData{id=2, name='Mukesh', salary=20000.0}
+9EmployeePayrollData{id=3, name='Anil', salary=100000.0}
+ Total number of entries are: 3

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EmployeePayrollImpl {
+
     public enum IOService {
         CONSOLE_IO, FILE_IO, REST_IO
     }
@@ -31,6 +32,15 @@ public class EmployeePayrollImpl {
             return new EmployeePayrollFileIOService().countEntries();
         }
         return 0;
+    }
+
+    /**
+     * This method is used to read the employee payroll data.
+     */
+    public static void printData(IOService fileIO) {
+        if (fileIO.equals(IOService.FILE_IO)) {
+            new EmployeePayrollFileIOService().printDataFromFile();
+        }
     }
 
     /*
